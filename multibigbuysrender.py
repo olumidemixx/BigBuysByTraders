@@ -449,7 +449,7 @@ async def main():
     application.add_handler(CommandHandler("stop", stop))
 
     # Get the webhook URL from environment variable or use a default for local testing
-    WEBHOOK_URL = "https://multiplebuytrackers-4kjh.onrender.com"  # Update this line with your Render URL
+    WEBHOOK_URL = "https://bigbuysbytraders.onrender.com"  # Update this line with your Render URL
     
     try:
         await asyncio.sleep(1.0)
@@ -484,7 +484,7 @@ def run_bot():
             listen="0.0.0.0",  # Listen on all available network interfaces
             port=PORT,         # Use the PORT from environment variable
             url_path=BOT_TOKEN,
-            webhook_url=f"https://multiplebuytrackers-4kjh.onrender.com/{BOT_TOKEN}",
+            webhook_url=f"https://bigbuysbytraders.onrender.com/{BOT_TOKEN}",
             drop_pending_updates=True
         )
 
