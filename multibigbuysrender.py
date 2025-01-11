@@ -341,7 +341,7 @@ async def send_trader_messages(trader_data, chat_id, context):
         market_cap = data.get('market_cap', 0)  # Access market_cap from data
         for token, count in data['addresses'].items():
             if count == 1:  # Check if the trader bought the token more than once
-                message = f"{trader_name} bought `{token}` with {sol_amount} under 1 milllion marketcap"
+                message = f"{trader_name} bought `{token}` with {sol_amount} SOL under $1m Mcap"
                 messages_to_send.append(message)
     return messages_to_send
 
