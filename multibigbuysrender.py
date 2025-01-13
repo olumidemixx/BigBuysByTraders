@@ -363,7 +363,7 @@ async def continuous_scraping(update, context):
     }
     #logging.info("seen")
     previous_messages = []
-    sent_count = 0  # Counter to track the number of messages sent
+    
     while continue_scraping:
         #logging.info("still scrapping")
         new_messages_found = False
@@ -375,6 +375,7 @@ async def continuous_scraping(update, context):
             listOfMultipleBuys = await send_trader_messages(messages, chat_id, context)
 
             current_messages = []
+            sent_count = 0  # Counter to track the number of messages sent
             has_change = False
             for message in listOfMultipleBuys:
                 #await context.bot.send_message(chat_id=chat_id, text=message)
