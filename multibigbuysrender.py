@@ -363,6 +363,7 @@ async def continuous_scraping(update, context):
     }
     #logging.info("seen")
     previous_messages = []
+    sent_count = 0  # Counter to track the number of messages sent
     while continue_scraping:
         #logging.info("still scrapping")
         new_messages_found = False
@@ -383,7 +384,7 @@ async def continuous_scraping(update, context):
             #previous_messages = current_messages.copy()  # Update previous_messages to the current round's message
             
             
-            sent_count = 0  # Counter to track the number of messages sent
+            #sent_count = 0  # Counter to track the number of messages sent
             for message in current_messages[:200]:
                 
                 if message not in previous_messages[:200]:
